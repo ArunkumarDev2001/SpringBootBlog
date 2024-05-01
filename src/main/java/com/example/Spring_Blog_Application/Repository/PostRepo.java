@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PostRepo extends MongoRepository<Post, ObjectId> {
+public interface PostRepo extends MongoRepository<Post, String> {
     List<Post> findAllByNameContaining(String name);
 }

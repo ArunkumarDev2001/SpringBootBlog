@@ -18,7 +18,7 @@ public class CommentsServiceImp implements CommentsService{
     @Autowired
     private PostRepo postRepo;
     @Override
-    public Comments createComment(ObjectId postId, String postedBy, String contant) {
+    public Comments createComment(String postId, String postedBy, String contant) {
         Optional<Post> optionalPost=postRepo.findById(postId);
         if(optionalPost.isPresent()){
             Comments comment=new Comments();
@@ -35,7 +35,7 @@ public class CommentsServiceImp implements CommentsService{
     }
 
     @Override
-    public List<Comments> getCommentsById(ObjectId postId) {
+    public List<Comments> getCommentsById(String postId) {
         return comentRepo.findByPostId(postId);
     }
 

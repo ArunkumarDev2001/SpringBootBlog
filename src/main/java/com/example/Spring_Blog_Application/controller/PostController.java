@@ -48,7 +48,7 @@ public class PostController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?>getPostById(@PathVariable ObjectId id){
+    public ResponseEntity<?>getPostById(@PathVariable String id){
         try{
             Post post=postServices.getById(id);
             return ResponseEntity.ok(post);
@@ -59,7 +59,7 @@ public class PostController {
     }
 
     @PutMapping("/{postId}/like")
-    public ResponseEntity<?> likePost(@PathVariable ObjectId postId){
+    public ResponseEntity<?> likePost(@PathVariable String postId){
         try {
             postServices.likePost(postId);
             return ResponseEntity.ok(new String[]{"Post liked successfully."});

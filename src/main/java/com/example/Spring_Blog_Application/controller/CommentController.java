@@ -20,7 +20,7 @@ public class CommentController {
 
     @PostMapping("comments/created")
 
-    public ResponseEntity<?> createPostComment(@RequestParam ObjectId postId, @RequestParam String postedBy, @RequestBody String contant){
+    public ResponseEntity<?> createPostComment(@RequestParam String postId, @RequestParam String postedBy, @RequestBody String contant){
 
         try{
 
@@ -32,7 +32,7 @@ public class CommentController {
         }
     }
     @GetMapping("comments/{postId}")
-    public ResponseEntity<?> getCommetsByPostId(@PathVariable ObjectId postId){
+    public ResponseEntity<?> getCommetsByPostId(@PathVariable String postId){
         try{
             return ResponseEntity.ok(commentService.getCommentsById(postId));
 

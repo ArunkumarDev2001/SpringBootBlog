@@ -25,7 +25,7 @@ import java.util.Date;
 public class Comments {
     @Id
 
-    private ObjectId id;
+    private String id;
     private String Contant;
     private Date createdAt;
     private String postedBy;

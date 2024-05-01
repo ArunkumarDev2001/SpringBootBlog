@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CommentsRepo extends MongoRepository<Comments, ObjectId> {
-    List<Comments> findByPostId(ObjectId postId);
+public interface CommentsRepo extends MongoRepository<Comments, String> {
+    List<Comments> findByPostId(String postId);
 }

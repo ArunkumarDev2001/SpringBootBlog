@@ -31,7 +31,7 @@ public class PostServiceImp implements PostServices{
 
 
     @Override
-    public Post  getById(ObjectId id){
+    public Post  getById(String id){
         Optional<Post> op=postRepo.findById(id);
         if(op.isPresent()){
             Post post=op.get();
@@ -42,7 +42,7 @@ public class PostServiceImp implements PostServices{
         }
     }
     @Override
-    public void likePost(ObjectId postId){
+    public void likePost(String postId){
         Optional<Post> op=postRepo.findById(postId);
         if(op.isPresent()){
 

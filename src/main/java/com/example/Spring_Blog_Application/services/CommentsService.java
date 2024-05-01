@@ -6,6 +6,6 @@ import org.bson.types.ObjectId;
 import java.util.List;
 
 public interface CommentsService {
-    Comments createComment(ObjectId postId, String postedBy, String contant);
-    List<Comments> getCommentsById(ObjectId postId);
+    Comments createComment(String postId, String postedBy, String contant);
+    List<Comments> getCommentsById(String postId);
 }

@@ -21,7 +21,7 @@ import java.util.List;
 
 public class Post {
     @Id
-    private ObjectId id;
+    private String id;
     private String name;
 
     private String contant;

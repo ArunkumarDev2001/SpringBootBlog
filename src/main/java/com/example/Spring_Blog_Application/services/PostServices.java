@@ -9,7 +9,7 @@ import java.util.List;
 public interface PostServices {
     Post savePost(Post post);
     List<Post> getAllPost();
-    Post getById(ObjectId id);;
-    void likePost(ObjectId postId);
+    Post getById(String id);;
+    void likePost(String postId);
     List<Post> searchPost(String name);
 }
